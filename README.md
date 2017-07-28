@@ -1,3 +1,8 @@
+# note on modifications
+This is a slight modification on jakbutler/docker-calibredb that uses inotify-tools to watch the import folder and auto-converts non-mobi files to mobi and adds them back to the database. Otherwise, it is behaves exactly the same as jakbutler intended and the rest of his readme still applies.
+
+What follows is jakbutler's original readme.md
+
 # docker-calibredb
 A lightweight docker container, based on [Alpine Linux](https://alpinelinux.org/), for running the [calibredb](https://manual.calibre-ebook.com/generated/en/calibredb.html) backend component to auto-import new books into a library. Intended to work in tandem with other containers running other parts of [calibre](https://calibre-ebook.com/) or serving up its library.
 
