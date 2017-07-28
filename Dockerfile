@@ -30,7 +30,8 @@ RUN apk update && \
     imagemagick \
     qt5-qtbase-x11 \
     xdg-utils \
-    xz && \
+    xz \
+    inotify-tools && \
 #########################################
 ##            APP INSTALL              ##
 #########################################
@@ -41,7 +42,11 @@ RUN apk update && \
 ##            Script Setup             ##
 #########################################
 ADD run_auto_importer.sh /usr/bin/run_auto_importer.sh
-RUN chmod a+x /usr/bin/run_auto_importer.sh
+ADD autoadd.sh /usr/bin/autoadd.sh
+ADD mobilize.py /usr/bin/mobilize.py
+RUN chmod a+x /usr/bin/run_auto_importer.sh \
+  /usr/bin/autoadd.sh \
+  /usr/bin/mobilize.py
 
 #########################################
 ##         EXPORTS AND VOLUMES         ##
