@@ -28,5 +28,5 @@ if [ -z "$CALIBREDB_IMPORT_DIRECTORY" ]; then
   CALIBREDB_IMPORT_DIRECTORY=/opt/calibredb/import
 fi
 
-echo "Starting auto-importer process. (not yet, for test)"
+echo "Starting auto-importer process."
 /usr/bin/autoadd.sh
