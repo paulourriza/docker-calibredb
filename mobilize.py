@@ -16,3 +16,4 @@ for book in json.load(os.popen(search_command)):
     add_command = '/opt/calibre/calibredb add_format ' + str(book['id']) + ' ' + convert_path + ' --with-library ' + os.environ['CALIBRE_LIBRARY_DIRECTORY']
     os.system(convert_command)
     os.system(add_command)
+    os.remove(convert_path)
